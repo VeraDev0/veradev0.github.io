@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>VeraDev</title>
+    <style>
+        a:not(.btn) {
+            text-decoration: underline;
+            color:  lightblue;
+        }
+
+        @media (max-width: 1919px) {
+            ._1080p-flex-dir-col {
+                flex-direction: column !important;
+            }
+
+            body > div {
+                width: unset !important;
+            }
+
+            body > div > section:first-child img {
+                display: none;
+            }
+
+            body {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            body > div > section:first-child > div > h1 {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            body > div > section:first-child > div > p {
+                width: unset;
+            }
+
+            .text-6xl {
+                font-size: 3rem;
+            }
+
+            .text-4xl {
+                font-size: 2rem;
+            }
+
+            body > div > div:nth-child(2) h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            
+            body > div > div:nth-child(2) section:last-child,
+            body > div > div:nth-child(2) p {
+                text-align: center;
+            }
+
+            body > div > div:nth-child(2) section:last-child {
+                width: unset;
+            }
+
+            body > div > div:nth-child(2) section:last-child img {
+                margin-top: 1rem;
+            }
+
+            body > div > div:nth-child(2) section:last-child div > div:last-child {
+                gap: .5rem;
+            }
+
+            body > div > div:nth-child(2) section:last-child div .w-1\/2 {
+                width: unset;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#eeeeee]">
+    <div class="h-[30rem] overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-[30rem] bg-gradient-to-b from-transparent to-[#0a0a0a] z-10"></div>
+        <img class="w-full -translate-y-[39%]" src="images/wallpaper.png">
+    </div>
+    <div class="w-[96rem] mt-30 mb-10 mx-auto flex flex-col gap-5">
+        <section class="bg-[#1a1a1a] p-5 pb-10 flex justify-between">
+            <div>
+                <h1 class="font-extrabold text-6xl">Haii, I'm VeraDev!!! :3</h1>
+                <p class="w-2/3 mb-2">
+                    I am <strong>VeraDev</strong>, the guy that you got told to not worry about. In short, i am a absolute maniac at programming and with computers. I am
+                    interested in a <strong>LOT</strong> of stuff so high-chance that there's something that i mention that you do aswel. I'm also a student!
+                </p>
+                <i >Location: 🇳🇱 Europe, Netherlands, Pronounces: He/Him, Gender: Male</i>
+            </div>
+            <img src="/images/blobdance.gif">
+        </section>
+        <div class="_1080p-flex-dir-col flex gap-5">
+            <section class="bg-[#1a1a1a] p-5">
+                <h2 class="font-bold text-4xl">Surely, this guy ""isn't"" a lunatic right?</h2>
+                <p>
+                    This is called short foreshadowing. In less than a minute you'l realise that i am a absolute psychopath on coding, a literal maniac at it. But this is
+                    what i do with my hobbies and such:
+                </p>
+
+                <div class="_1080p-flex-dir-col flex justify-between gap-5 mt-5 text-center">
+                    <div class="bg-[#2a2a2a] p-5">
+                        <h3 class="text-3xl font-semibold">My hobbies</h3>
+                        <p>Programming</p>
+                        <p>Mathematics</p>
+                    </div>
+                    
+                    <div class="bg-[#2a2a2a] p-5">
+                        <h3 class="text-3xl font-semibold">My coding skills</h3>
+                        <p>Frontend & Backend Web developer</p>
+                        <p>Mod Developer</p>
+                        <p>Reverse Engineering</p>
+                        <p>Software Developer</p>
+                    </div>
+
+                    <div class="bg-[#2a2a2a] p-5">
+                        <h3 class="text-3xl font-semibold">My other skills</h3>
+                        <p>Basic Modeling & Animation</p>
+                        <p>UI/UX Designer</p>
+                        <p>Marketing</p>
+                        <p>Shaders</p>
+                    </div>
+                </div>
+
+                <p class="mt-5">
+                    As you can see, i have a lot of skills and for me, its actually quite too early to be able to know and do all of these. So that means that i'm very good even tho the average person wouldn't be able to do this.
+                </p>
+
+                <h2 class="font-bold text-4xl mt-5">Programming languages i use:</h2>
+
+                <div class="_1080p-flex-dir-col flex mt-5 gap-5">
+                    <div class="flex flex-col gap-5">
+                        <a class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
+                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/cpp.png">
+                            <span class="my-auto whitespace-nowrap">
+                                <h2 class="font-bold text-2xl">C++</h2>
+                                <p>Used for basicly everything</p>
+                            </span>
+                        </a>
+    
+                        <a class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
+                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/lua.png">
+                            <span class="my-auto whitespace-nowrap">
+                                <h2 class="font-bold text-2xl">Lua</h2>
+                                <p>Used for modding</p>
+                            </span>
+                        </a>
+    
+                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
+                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/python.png">
+                            <span class="my-auto whitespace-nowrap">
+                                <h2 class="font-bold text-2xl">Python</h2>
+                                <p>Used for creating tools</p>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-5">
+                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
+                            <img class="bg-[#000000aa] rounded-[100%] p-2" width="64" height="64" src="/images/html-css-tailwind.png">
+                            <span class="my-auto whitespace-nowrap">
+                                <h2 class="font-bold text-2xl">HTML / CSS / Tailwind</h2>
+                                <p>Used for creating sites (ofcourse)</p>
+                            </span>
+                        </a>
+
+                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
+                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/javascript.png">
+                            <span class="my-auto whitespace-nowrap">
+                                <h2 class="font-bold text-2xl">Javascript</h2>
+                                <p>Used for creating sites, backends & discord bots</p>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-[#1a1a1a] p-5 w-2/3">
+                <h2 class="font-bold text-4xl mb-5">My Projects</h2>
+
+                <div class="bg-[#2a2a2a] p-5 mb-5">
+                    <div class="_1080p-flex-dir-col flex gap-5">
+                        <div class="w-1/2">
+                            <h1 class="text-3xl font-bold">ScrapComputers</h1>
+                            <p>
+                                A VERY powerful, advanced & performant Computer mod for the game <a href="https://store.steampowered.com/app/387990/Scrap_Mechanic/">Scrap Mechanic</a>.
+                                When the mod got released, it beaten the compettitors and then after a bugfix, absolutely <strong>DEMOLISHED</strong> them.
+                            </p>
+                        </div>
+                        <img class="w-1/2 h-fit" src="https://images.steamusercontent.com/ugc/2468624856957143216/6E1E127A86027D45C8EA0349F79C30064BE0A0B0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+                    </div>
+                    
+                    <div class="_1080p-flex-dir-col flex gap-5 mt-5">
+                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3269912087">Visit Steam Page</a>
+                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://scrapcomputers.dev">Visit Website</a>
+                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https:/https://github.com/ScrapComputers">Visit Github Organization</a>
+                    </div>
+                </div>
+
+                <div class="bg-[#2a2a2a] p-5">
+                    <div class="_1080p-flex-dir-col flex gap-5">
+                        <div class="w-1/2">
+                            <h1 class="text-3xl font-bold">PrismaDLL</h1>
+                            <p>
+                                A upcoming <strong>MASSIVE</strong> dll mod which would extend the game <a href="https://store.steampowered.com/app/387990/Scrap_Mechanic/">Scrap Mechanic</a>'s API
+                                bigger than the community ever has seen. It would have features that no other mod has done.
+                            </p>
+                        </div>
+                        <img class="w-1/2 h-fit" src="/images/unknown.png">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="bg-[#1a1a1a] p-5">
+            <h2 class="font-bold text-4xl">Contact me</h2>
+            <p>Although i am sometimes shy about meeting people, if you wan't to contact me about <i>something</i> then sure. These are my socials.</p>
+
+            <div class="flex _1080p-flex-dir-col mt-5 gap-5">
+                <a href="discord.com/users/1205565279728443483" class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
+                    <img class="invert" src="/images/discord.png">
+                    <span class="my-auto">
+                        Contact me via <span>Discord</span>!
+                    </span>
+                </a>
+                <a href="https://www.reddit.com/user/VeraDeveloper/" class="btn p-5 bg-orange-500 flex gap-5 hover:bg-orange-600 cursor-pointer">
+                    <img class="invert" src="/images/reddit.png">
+                    <span class="my-auto">
+                        Contact me via <span>Reddit</span>!
+                    </span>
+                </a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
