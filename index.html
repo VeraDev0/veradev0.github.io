@@ -18,6 +18,8 @@
 
             body > div {
                 width: unset !important;
+                margin-top: 1.25rem !important;
+                margin-bottom: 1.25rem !important;
             }
 
             body > div > section:first-child img {
@@ -72,6 +74,26 @@
             body > div > div:nth-child(2) section:last-child div .w-1\/2 {
                 width: unset;
             }
+
+            body > div:first-child {
+                display: none;
+            }
+
+            #usedLanguages * {
+                white-space: unset;
+            }
+
+            #usedLanguages span {
+                width: 100%;
+            }
+
+            #usedLanguages h2 {
+                line-height: 1rem;
+            }
+
+            body > div > div > section:first-child {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -85,20 +107,16 @@
             <div>
                 <h1 class="font-extrabold text-6xl">Haii, I'm VeraDev!!! :3</h1>
                 <p class="w-2/3 mb-2">
-                    I am <strong>VeraDev</strong>, the guy that you got told to not worry about. In short, i am a absolute maniac at programming and with computers. I am
-                    interested in a <strong>LOT</strong> of stuff so high-chance that there's something that i mention that you do aswel. I'm also a student!
+                    I am <strong>VeraDev</strong>, a programmer that writes mods, programs and more. I love making stuff that competets with other people's apps and mods.
+                    Started programming since roughly 2020-2022 (don't know exact date) and since 2024 started learning optimizations to make faster code.
                 </p>
                 <i >Location: 🇳🇱 Europe, Netherlands, Pronounces: He/Him, Gender: Male</i>
             </div>
             <img src="/images/blobdance.gif">
         </section>
         <div class="_1080p-flex-dir-col flex gap-5">
-            <section class="bg-[#1a1a1a] p-5">
-                <h2 class="font-bold text-4xl">Surely, this guy ""isn't"" a lunatic right?</h2>
-                <p>
-                    This is called short foreshadowing. In less than a minute you'l realise that i am a absolute psychopath on coding, a literal maniac at it. But this is
-                    what i do with my hobbies and such:
-                </p>
+            <section class="bg-[#1a1a1a] p-5 w-5/8">
+                <h2 class="font-bold text-4xl text-center">My hobbies and skills</h2>
 
                 <div class="_1080p-flex-dir-col flex justify-between gap-5 mt-5 text-center">
                     <div class="bg-[#2a2a2a] p-5">
@@ -124,13 +142,9 @@
                     </div>
                 </div>
 
-                <p class="mt-5">
-                    As you can see, i have a lot of skills and for me, its actually quite too early to be able to know and do all of these. So that means that i'm very good even tho the average person wouldn't be able to do this.
-                </p>
+                <h2 class="font-bold text-4xl mt-5 text-center">Programming languages i use:</h2>
 
-                <h2 class="font-bold text-4xl mt-5">Programming languages i use:</h2>
-
-                <div class="_1080p-flex-dir-col flex mt-5 gap-5">
+                <div id="usedLanguages" class="_1080p-flex-dir-col flex mt-5 gap-5">
                     <div class="flex flex-col gap-5">
                         <a class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
                             <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/cpp.png">
@@ -176,7 +190,7 @@
                     </div>
                 </div>
             </section>
-            <section class="bg-[#1a1a1a] p-5 w-2/3">
+            <section class="bg-[#1a1a1a] p-5 w-4/8">
                 <h2 class="font-bold text-4xl mb-5">My Projects</h2>
 
                 <div class="bg-[#2a2a2a] p-5 mb-5">
@@ -201,22 +215,25 @@
                 <div class="bg-[#2a2a2a] p-5">
                     <div class="_1080p-flex-dir-col flex gap-5">
                         <div class="w-1/2">
-                            <h1 class="text-3xl font-bold">PrismaDLL</h1>
+                            <h1 class="text-3xl font-bold">VSMX-DLL</h1>
                             <p>
                                 A upcoming <strong>MASSIVE</strong> dll mod which would extend the game <a href="https://store.steampowered.com/app/387990/Scrap_Mechanic/">Scrap Mechanic</a>'s API
                                 bigger than the community ever has seen. It would have features that no other mod has done.
                             </p>
+                            <i class="opacity-20 text-xs">BETTERAPI DELENDA EST</i>
                         </div>
-                        <img class="w-1/2 h-fit" src="/images/unknown.png">
+                        <img class="w-1/2 h-fit" src="/images/vsmx.png">
+                    </div>
+
+                    <div class="_1080p-flex-dir-col flex gap-5 mt-5">
+                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://github.com/Project-VSMX">Visit Github Organization</a>
                     </div>
                 </div>
             </section>
         </div>
         <section class="bg-[#1a1a1a] p-5">
-            <h2 class="font-bold text-4xl">Contact me</h2>
-            <p>Although i am sometimes shy about meeting people, if you wan't to contact me about <i>something</i> then sure. These are my socials.</p>
-
-            <div class="flex _1080p-flex-dir-col mt-5 gap-5">
+            <h2 class="font-bold text-4xl text-center">Contact me</h2>
+            <div class="flex _1080p-flex-dir-col justify-center mt-5 gap-5">
                 <a href="discord.com/users/1205565279728443483" class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
                     <img class="invert" src="/images/discord.png">
                     <span class="my-auto">
