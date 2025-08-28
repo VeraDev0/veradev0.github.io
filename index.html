@@ -1,253 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>VeraDev</title>
-    <style>
-        a:not(.btn) {
-            text-decoration: underline;
-            color:  lightblue;
-        }
+	<title>VeraDev</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/js/tailwindcss.js"></script>
+	<link rel="preload" href="/images/ProfilePicture.png" as="image" type="image/png">
+	<link rel="preload" href="/images/ProfilePictureLine.png" as="image" type="image/png">
+	<link rel="preload" href="/images/StartImage.png" as="image" type="image/png">
+	<link rel="preload" href="/images/ScrapComputers.png" as="image" type="image/png">
+	<link rel="preload" href="/images/ReGui.png" as="image" type="image/png">
+	<link rel="preload" href="/images/VSMX.png" as="image" type="image/png">
+	<link rel="preload" href="/fonts/CascadiaCode-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="preload" href="/fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+	<link rel="icon" href="/images/ProfilePicture.png">
+	<style>
+		@font-face {
+			font-family: 'CascadiaCode';
+			src: url('fonts/CascadiaCode-Regular.ttf') format('truetype');
+			font-display: swap;
+		}
 
-        @media (max-width: 1919px) {
-            ._1080p-flex-dir-col {
-                flex-direction: column !important;
-            }
+		@font-face {
+			font-family: 'Silkscreen';
+			src: url('fonts/Silkscreen-Regular.ttf') format('truetype');
+			font-display: swap;
+		}
+	</style>
+	<script>
+		function onUnavailableLinkPressed(ev) {
+			ev.preventDefault()
 
-            body > div {
-                width: unset !important;
-                margin-top: 1.25rem !important;
-                margin-bottom: 1.25rem !important;
-            }
+			alert("This project is currently unavaliable to the public")
+		}
 
-            body > div > section:first-child img {
-                display: none;
-            }
+		function onDOMContentLoaded(ev) {
+			ev.preventDefault()
 
-            body {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
+			/**
+			 * @type {HTMLAnchorElement[]}
+			 */
+			const links = document.querySelectorAll("a")
+			for(const link of links) {
+				if(link.classList.contains("sm-link")) {
+					link.href = "https://store.steampowered.com/app/387990/Scrap_Mechanic/"
+				}
 
-            body > div > section:first-child > div > h1 {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
+				if(link.classList.contains("unavailable-link")) {
+					link.addEventListener("click", onUnavailableLinkPressed)
+				}
 
-            body > div > section:first-child > div > p {
-                width: unset;
-            }
+				link.className += " underline text-blue-500 hover:text-blue-700 transition-colors ease duration-100 cursor-pointer"
+			}
+		}
 
-            .text-6xl {
-                font-size: 3rem;
-            }
-
-            .text-4xl {
-                font-size: 2rem;
-            }
-
-            body > div > div:nth-child(2) h2 {
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                text-align: center;
-            }
-            
-            body > div > div:nth-child(2) section:last-child,
-            body > div > div:nth-child(2) p {
-                text-align: center;
-            }
-
-            body > div > div:nth-child(2) section:last-child {
-                width: unset;
-            }
-
-            body > div > div:nth-child(2) section:last-child img {
-                margin-top: 1rem;
-            }
-
-            body > div > div:nth-child(2) section:last-child div > div:last-child {
-                gap: .5rem;
-            }
-
-            body > div > div:nth-child(2) section:last-child div .w-1\/2 {
-                width: unset;
-            }
-
-            body > div:first-child {
-                display: none;
-            }
-
-            #usedLanguages * {
-                white-space: unset;
-            }
-
-            #usedLanguages span {
-                width: 100%;
-            }
-
-            #usedLanguages h2 {
-                line-height: 1rem;
-            }
-
-            body > div > div > section:first-child {
-                width: 100%;
-            }
-        }
-    </style>
+		document.addEventListener("DOMContentLoaded", onDOMContentLoaded)
+	</script>
 </head>
-<body class="bg-[#0a0a0a] text-[#eeeeee]">
-    <div class="h-[30rem] overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-[30rem] bg-gradient-to-b from-transparent to-[#0a0a0a] z-10"></div>
-        <img class="w-full -translate-y-[39%]" src="images/wallpaper.png">
-    </div>
-    <div class="w-[96rem] mt-30 mb-10 mx-auto flex flex-col gap-5">
-        <section class="bg-[#1a1a1a] p-5 pb-10 flex justify-between">
-            <div>
-                <h1 class="font-extrabold text-6xl">Haii, I'm VeraDev!!! :3</h1>
-                <p class="w-2/3 mb-2">
-                    I am <strong>VeraDev</strong>, a programmer that writes mods, programs and more. I love making stuff that competets with other people's apps and mods.
-                    Started programming since roughly 2020-2022 (don't know exact date) and since 2024 started learning optimizations to make faster code.
-                </p>
-                <i >Location: 🇳🇱 Europe, Netherlands, Pronounces: He/Him, Gender: Male</i>
-            </div>
-            <img src="/images/blobdance.gif">
-        </section>
-        <div class="_1080p-flex-dir-col flex gap-5">
-            <section class="bg-[#1a1a1a] p-5 w-5/8">
-                <h2 class="font-bold text-4xl text-center">My hobbies and skills</h2>
+<body class="bg-[#161616] text-white font-[CascadiaCode] overflow-x-hidden">
+	<main class="flex flex-col">
+		<section class="flex w-full items-center xl:items-start">
+			<div class="grow xl:grow-0"><img src="/images/ProfilePictureLine.png" class="w-full xl:w-[96px] h-[96px]"></div>
+			<div class="shrink-0 xl:shrink-0"><img src="/images/ProfilePicture.png" class="w-[96px] h-[96px]"></div>
+			<div class="flex-1"><img src="/images/ProfilePictureLine.png" class="w-full h-[96px]"></div>
+		</section>
+		<section class="w-screen mt-[24px] min-h-[calc(100vh-(calc(96px+24px)))] flex items-center">
+			<div class="-fuwll 2xl:w-[90rem] mx-auto pb-[64px] h-full flex flex-col 2xl:flex-row gap-10">
+				<div class="mx-5 xl:mx-auto 2xl:mx-0 xl:w-2/3 2xl:w-1/2 text-center my-auto">
+					<img class="max-2xl:h-1/2 max-2xl:mx-auto max-xl:hidden" src="images/StartImage.png">
+					<h1 class="font-[Silkscreen] font-bold text-5xl 2xl:text-[3.5rem] mt-10">Hello, I'm VeraDev</h1>
+					<p class="2xl:text-2xl mt-2 mx-auto">I'm a professional programmer specializing in C++ and Lua, with experience in reverse engineering software.</p>
+				</div>
+				<div class="mx-5 xl:mx-auto 2xl:mx-0 xl:w-2/3 2xl:w-1/2 flex flex-col gap-5 justify-center">
+					<h1 class="text-2xl text-center font-[Silkscreen]">Programming languages & Capabilities</h1>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">C/C++</h1>
+						<p class="text-sm">C++ is my favourite language and what i prefer the most out of any other language. It's the only language i use to create software and advanced mods.</p>
+					</div>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">Lua</h1>
+						<p class="text-sm">
+							I usually use this for creating mods for the game
+							<a class="sm-link">Scrap Mechanic</a>.
+							Most of my projects are for this game as well.
+						</p>
+					</div>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">Javascript (CommonJS & ESM)</h1>
+						<p class="text-sm">Javascript is usually the best for me when i want to make Webservers or make tools that work better with Javascript than Python</p>
+					</div>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">Python</h1>
+						<p class="text-sm">I use this to create tools or quick & dirty projects. I don't really use python for anything else.</p>
+					</div>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">Frontend & Backend web development</h1>
+						<p class="text-sm">I also can write websites. However writing sites that work in mobile absolutely sucks. Even this portifolo doesn't have great mobile support.</p>
+					</div>
+					<div class="bg-[#242424] w-full p-5 gap-5">
+						<h1 class="font-[Silkscreen]">Reverse engineering</h1>
+						<p class="text-sm">
+							I usually reverse software for the game <a class="sm-link">Scrap Mechanic</a>.
+							Althought not the best at it, i can already reverse functions and classes.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="w-screen max-xl:px-5 xl:w-[50rem] 2xl:w-[90rem] mx-auto pb-[64px] h-full flex flex-col gap-10">
+			<h1 class="text-5xl xl:text-6xl font-[Silkscreen] mx-auto text-center">My Projects</h1>
 
-                <div class="_1080p-flex-dir-col flex justify-between gap-5 mt-5 text-center">
-                    <div class="bg-[#2a2a2a] p-5">
-                        <h3 class="text-3xl font-semibold">My hobbies</h3>
-                        <p>Programming</p>
-                        <p>Mathematics</p>
-                    </div>
-                    
-                    <div class="bg-[#2a2a2a] p-5">
-                        <h3 class="text-3xl font-semibold">My coding skills</h3>
-                        <p>Frontend & Backend Web developer</p>
-                        <p>Mod Developer</p>
-                        <p>Reverse Engineering</p>
-                        <p>Software Developer</p>
-                    </div>
-
-                    <div class="bg-[#2a2a2a] p-5">
-                        <h3 class="text-3xl font-semibold">My other skills</h3>
-                        <p>Basic Modeling & Animation</p>
-                        <p>UI/UX Designer</p>
-                        <p>Marketing</p>
-                        <p>Shaders</p>
-                    </div>
-                </div>
-
-                <h2 class="font-bold text-4xl mt-5 text-center">Programming languages i use:</h2>
-
-                <div id="usedLanguages" class="_1080p-flex-dir-col flex mt-5 gap-5">
-                    <div class="flex flex-col gap-5">
-                        <a class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
-                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/cpp.png">
-                            <span class="my-auto whitespace-nowrap">
-                                <h2 class="font-bold text-2xl">C++</h2>
-                                <p>Used for basicly everything</p>
-                            </span>
-                        </a>
-    
-                        <a class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
-                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/lua.png">
-                            <span class="my-auto whitespace-nowrap">
-                                <h2 class="font-bold text-2xl">Lua</h2>
-                                <p>Used for modding</p>
-                            </span>
-                        </a>
-    
-                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
-                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/python.png">
-                            <span class="my-auto whitespace-nowrap">
-                                <h2 class="font-bold text-2xl">Python</h2>
-                                <p>Used for creating tools</p>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="flex flex-col gap-5">
-                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
-                            <img class="bg-[#000000aa] rounded-[100%] p-2" width="64" height="64" src="/images/html-css-tailwind.png">
-                            <span class="my-auto whitespace-nowrap">
-                                <h2 class="font-bold text-2xl">HTML / CSS / Tailwind</h2>
-                                <p>Used for creating sites (ofcourse)</p>
-                            </span>
-                        </a>
-
-                        <a class="btn p-5 bg-yellow-500 flex gap-5 hover:bg-yellow-600 cursor-pointer text-black">
-                            <img class="bg-[#000000aa] rounded-[100%] p-2" src="/images/javascript.png">
-                            <span class="my-auto whitespace-nowrap">
-                                <h2 class="font-bold text-2xl">Javascript</h2>
-                                <p>Used for creating sites, backends & discord bots</p>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section class="bg-[#1a1a1a] p-5 w-4/8">
-                <h2 class="font-bold text-4xl mb-5">My Projects</h2>
-
-                <div class="bg-[#2a2a2a] p-5 mb-5">
-                    <div class="_1080p-flex-dir-col flex gap-5">
-                        <div class="w-1/2">
-                            <h1 class="text-3xl font-bold">ScrapComputers</h1>
-                            <p>
-                                A VERY powerful, advanced & performant Computer mod for the game <a href="https://store.steampowered.com/app/387990/Scrap_Mechanic/">Scrap Mechanic</a>.
-                                When the mod got released, it beaten the compettitors and then after a bugfix, absolutely <strong>DEMOLISHED</strong> them.
-                            </p>
-                        </div>
-                        <img class="w-1/2 h-fit" src="https://images.steamusercontent.com/ugc/2468624856957143216/6E1E127A86027D45C8EA0349F79C30064BE0A0B0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
-                    </div>
-                    
-                    <div class="_1080p-flex-dir-col flex gap-5 mt-5">
-                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3269912087">Visit Steam Page</a>
-                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://scrapcomputers.dev">Visit Website</a>
-                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https:/https://github.com/ScrapComputers">Visit Github Organization</a>
-                    </div>
-                </div>
-
-                <div class="bg-[#2a2a2a] p-5">
-                    <div class="_1080p-flex-dir-col flex gap-5">
-                        <div class="w-1/2">
-                            <h1 class="text-3xl font-bold">VSMX-DLL</h1>
-                            <p>
-                                A upcoming <strong>MASSIVE</strong> dll mod which would extend the game <a href="https://store.steampowered.com/app/387990/Scrap_Mechanic/">Scrap Mechanic</a>'s API
-                                bigger than the community ever has seen. It would have features that no other mod has done.
-                            </p>
-                            <i class="opacity-20 text-xs">BETTERAPI DELENDA EST</i>
-                        </div>
-                        <img class="w-1/2 h-fit" src="/images/vsmx.png">
-                    </div>
-
-                    <div class="_1080p-flex-dir-col flex gap-5 mt-5">
-                        <a class="btn py-2 px-4 bg-red-500 hover:bg-red-600 cursor-pointer" href="https://github.com/Project-VSMX">Visit Github Organization</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <section class="bg-[#1a1a1a] p-5">
-            <h2 class="font-bold text-4xl text-center">Contact me</h2>
-            <div class="flex _1080p-flex-dir-col justify-center mt-5 gap-5">
-                <a href="discord.com/users/1205565279728443483" class="btn p-5 bg-blue-500 flex gap-5 hover:bg-blue-600 cursor-pointer">
-                    <img class="invert" src="/images/discord.png">
-                    <span class="my-auto">
-                        Contact me via <span>Discord</span>!
-                    </span>
-                </a>
-                <a href="https://www.reddit.com/user/VeraDeveloper/" class="btn p-5 bg-orange-500 flex gap-5 hover:bg-orange-600 cursor-pointer">
-                    <img class="invert" src="/images/reddit.png">
-                    <span class="my-auto">
-                        Contact me via <span>Reddit</span>!
-                    </span>
-                </a>
-            </div>
-        </section>
-    </div>
+			<div class="flex flex-col gap-20">
+				<div class="flex gap-10 flex-col 2xl:flex-row">
+					<img class="2xl:w-1/2" src="/images/ScrapComputers.png">
+					<div class="2xl:w-1/2">
+						<h1 class="text-5xl font-[Silkscreen] text-center 2xl:text-right max-2xl:mb-10 max-xl:text-3xl">ScrapComputers</h1>
+						<p>
+							ScrapComputers is a mod for <a class="sm-link">Scrap Mechanic</a> which adds Lua Computers to the game. Unlike other mods, its one of the most performant
+							and unrestrictive mod out there while still being balanced.
+						</p>
+						<br>
+						<p>
+							Even after facing hostile tactics from certain compeititors, including review bombing and even hijacking our website's traffic. We still pushed fowards into
+							one of the craziest yet powerful Computer Mod out there in the Scrap Mechanic Community.
+						</p>
+						<br>
+						<div class="mt-5 *:p-5 *:bg-[#222222] *:text-white *:no-underline *:hover:text-white *:hover:bg-[#444444] max-2xl:flex 2xl:justify-start justify-center gap-10">
+							<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3269912087&searchtext=scrapcom">Steam page</a>
+							<a href="https://scrapcomputers.dev">Website</a>
+						</div>
+					</div>
+				</div>
+				<div class="flex gap-10 flex-col-reverse 2xl:flex-row">
+					<div class="2xl:w-1/2">
+						<h1 class="text-5xl font-[Silkscreen] text-center 2xl:text-left max-2xl:mb-10">sm.regui</h1>
+						<p>Imagine this, you've literally remade MyGui inside MyGui, and somehow the inner one works better than the outer one. That's what sm.regui is</p>
+						<br>
+						<p>
+							sm.regui is a awesome GUI library for Scrap Mechanic which uses a exploit to write XML code via lua to be able to create MyGui Layout Files. It has
+							features that MyGui itself doesn't have. Such as:
+						</p>
+						<ul class="list-disc ml-10">
+							<li><p>Creating, destroying and modifing widgets</p></li>
+							<li><p>Custom Font Rendererer</p></li>
+							<li><p>Fullscreen GUI system</p></li>
+						</ul>
+						<br>
+						<p>There are more features however you should check it's github out for that.</p>
+						<br>
+						<div class="mt-3 *:p-5 *:bg-[#222222] *:text-white *:no-underline *:hover:text-white *:hover:bg-[#444444] max-2xl:flex 2xl:justify-start justify-center gap-10">
+							<a class="unavailable-link">Steam page</a>
+							<a class="unavailable-link">Website</a>
+						</div>
+					</div>
+					<img class="2xl:w-1/2" src="/images/ReGui.png">
+				</div>
+				<div class="flex gap-10 flex-col 2xl:flex-row">
+					<img class="2xl:w-1/2" src="/images/VSMX.png">
+					<div class="2xl:w-1/2">
+						<h1 class="text-5xl font-[Silkscreen] text-center 2xl:text-right max-2xl:mb-10">VSMX</h1>
+						<p>
+							VSMX is a massive project of mine which basicly is a SDK for Scrap Mechanic allowing modders to do whatever they please. VSMX will let you:
+						</p>
+						<ul class="list-disc ml-10">
+							<li><p>Control the renderer</p></li>
+							<li><p>Perform complicated tasks with Multi-threading</p></li>
+							<li><p>Full-blown GUI library (ImGui & sm.regui reimplementations for GUIs)</p></li>
+						</ul>
+						<br>
+						<p>There will be more features that VSMX would have however its private due to compeititors. VSMX will be finished around 2026 or 2027 (this is not a promise)</p>
+						<br>
+						<div class="mt-3 *:p-5 *:bg-[#222222] *:text-white *:no-underline *:hover:text-white *:hover:bg-[#444444] max-2xl:flex 2xl:justify-start justify-center gap-10">
+							<a href="https://github.com/Project-vsmx">Github Organization</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="w-screen max-xl:px-5 xl:w-[50rem] 2xl:w-[90rem] mx-auto pb-[64px] h-full flex flex-col gap-10">
+			<h1 class="text-6xl font-[Silkscreen] mx-auto text-center">Contact me</h1>
+			<p class="text-center text-2xl">
+				You can only contact me via Discord as its the only platform where i comminucate with other the people most.
+			</p>
+			<a class="text-4xl font-bold text-center" href="https://discord.com/users/1205565279728443483">Discord: @vera_dev</a>
+		</section>
+	</main>
 </body>
 </html>
